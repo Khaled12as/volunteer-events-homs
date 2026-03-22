@@ -60,8 +60,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ==================== الشعار (استبدل المسار) ====================
-logo_path = "logo.png"  # ← غيّر هنا إلى رابط شعارك إذا رفعته على GitHub أو Imgur
-# مثال رابط: "https://raw.githubusercontent.com/yourusername/yourrepo/main/logo.png"
+logo_url = "https://i.postimg.cc/025Yjq3T/Logo.png"   # ← حط الرابط الحقيقي هنا
+...
+st.image(logo_url, width=180)
 
 # ==================== تحميل الأنيميشن Lottie ====================
 def load_lottieurl(url):
