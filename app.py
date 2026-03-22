@@ -81,8 +81,9 @@ success_lottie = load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_j
 # ==================== الهيدر ====================
 col1, col2 = st.columns([1, 4])
 with col1:
-    if logo_path:
-        st.image(logo_path, width=180)
+       if logo_url:
+        st.image(logo_url, width=180)
+
 with col2:
     st.markdown('<h1 class="main-header">انضم إلى مكتب الفعاليات 🌱🎉</h1>', unsafe_allow_html=True)
     st.markdown("**كلية الهندسة الزراعية - جامعة حمص**")
