@@ -79,15 +79,19 @@ plant_lottie = load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_2d9
 success_lottie = load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_jrpz9l0u.json")  # علامة صح + احتفال
 
 # ==================== الهيدر ====================
+logo_url = "https://i.postimg.cc/025Yjq3T/Logo.png"  # رابطك الصحيح
+
 col1, col2 = st.columns([1, 4])
 with col1:
-       if logo_url:
+    try:
         st.image(logo_url, width=180)
+    except Exception as e:
+        st.warning(f"تعذر تحميل الشعار: {e} — لكن التطبيق يستمر")
+        st.info("الشعار: https://i.postimg.cc/025Yjq3T/Logo.png")
 
 with col2:
     st.markdown('<h1 class="main-header">انضم إلى مكتب الفعاليات 🌱🎉</h1>', unsafe_allow_html=True)
     st.markdown("**كلية الهندسة الزراعية - جامعة حمص**")
-
 st_lottie(plant_lottie, height=180, key="plant_header")
 
 st.markdown("""
